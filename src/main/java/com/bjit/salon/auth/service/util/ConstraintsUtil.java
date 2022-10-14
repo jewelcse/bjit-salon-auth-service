@@ -10,12 +10,13 @@ public class ConstraintsUtil {
 
 
     // gateway urls
-    public static final String SALON_SERVICE ="/salons-service/api/v1";
+    public static final String SALON_SERVICE ="/salons";
     public static final String STAFF_SERVICE ="/staffs-service/api/v1";
     public static final String RESERVATION_SERVICE ="/reservations/api/v1";
     public static final String SALON_STAFF_AG_SERVICE ="/salons-staff-ag-service/api/v1";
 
     public static final String[] APPLICATION_PUBLIC_URL= new String[]{
+            APPLICATION_BASE_URL+"/",
             APPLICATION_BASE_URL+"/sign-in",
             APPLICATION_BASE_URL+"/sign-up",
             APPLICATION_BASE_URL+"/",
@@ -30,22 +31,22 @@ public class ConstraintsUtil {
     };
 
     public static final String[] APPLICATION_SUPER_ADMIN_ACCESSIBLE_URL= new String[]{
-            APPLICATION_BASE_URL+"/activateDeactivate", // activate/deactivate the user
-            //SALON_SERVICE+"/salons", // manage salons
-            STAFF_SERVICE+"/staffs", // manage all staffs
+//            APPLICATION_BASE_URL+"/activateDeactivate", // activate/deactivate the user
+//            //SALON_SERVICE+"/salons", // manage salons
+//            STAFF_SERVICE+"/staffs", // manage all staffs
 
     };
     public static final String[] APPLICATION_ADMIN_ACCESSIBLE_URL= new String[]{
-            APPLICATION_BASE_URL+"/",
+//            APPLICATION_BASE_URL+"/",
 
 
     };
     public static final String[] APPLICATION_STAFF_ACCESSIBLE_URL= new String[]{
-            APPLICATION_BASE_URL+"/",
+//            APPLICATION_BASE_URL+"/",
 
     };
     public static final String[] APPLICATION_USER_ACCESSIBLE_URL= new String[]{
-            APPLICATION_BASE_URL+"/"
+//            APPLICATION_BASE_URL+"/"
     };
 
 

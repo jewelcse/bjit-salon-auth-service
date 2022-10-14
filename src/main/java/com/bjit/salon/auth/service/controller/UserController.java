@@ -21,6 +21,11 @@ public class UserController {
     private static final Logger log = LoggerFactory.getLogger(UserController.class);
     private final UserService userService;
 
+    @GetMapping("/")
+    public String welcome(){
+        return "Welcome BJIT salon service";
+    }
+
     @PostMapping("/activateDeactivate")
     public ResponseEntity<String> activateDeactivateUser(@Valid @RequestBody UserIdDto userIdDto) {
         boolean isUserAccountActive=userService.activateDeactivateUserAccount(userIdDto.getId());
