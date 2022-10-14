@@ -24,6 +24,7 @@ public class ConstraintsUtil {
             RESERVATION_SERVICE+"/**",
             // todo: make this url public, now for testing purpose it's being made public directly
             SALON_SERVICE+"/**",
+            "/salons-service/**",
             "/actuator",
             "/actuator/health",
             "/actuator/health/**",
