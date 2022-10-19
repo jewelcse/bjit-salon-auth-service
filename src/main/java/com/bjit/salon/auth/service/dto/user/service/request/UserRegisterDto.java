@@ -1,10 +1,7 @@
 package com.bjit.salon.auth.service.dto.user.service.request;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.Min;
@@ -18,6 +15,7 @@ import static javax.swing.text.StyleConstants.Size;
 @NoArgsConstructor
 @Getter
 @Setter
+@Builder
 public class UserRegisterDto {
 
     @NotEmpty(message = "first name must be required")
