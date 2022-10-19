@@ -2,6 +2,7 @@ package com.bjit.salon.auth.service.serviceImpl;
 
 
 import com.bjit.salon.auth.service.dto.user.service.request.UserRegisterDto;
+import com.bjit.salon.auth.service.dto.user.service.response.RegisterResponseDto;
 import com.bjit.salon.auth.service.entity.ERole;
 import com.bjit.salon.auth.service.entity.Role;
 import com.bjit.salon.auth.service.entity.User;
@@ -31,7 +32,7 @@ public class UserServiceImpl implements UserService {
 
 
     @Override
-    public void createUserAccount(UserRegisterDto registerDto) {
+    public RegisterResponseDto createUserAccount(UserRegisterDto registerDto) {
 
         if (userRepository.existsByEmail(registerDto.getEmail())) {
             throw new UserEmailAlreadyTakenException("email \"" + registerDto.getEmail() + "\" already taken!");
@@ -77,7 +78,18 @@ public class UserServiceImpl implements UserService {
                 .enabled(true)
                 .nonLocked(true)
                 .build();
-        userRepository.save(user);
+
+        User response = userRepository.save(user);
+
+        return RegisterResponseDto.builder()
+                .firstName(response.getFirstName())
+                .lastName(response.getLastName())
+                .username(response.getUsername())
+                .email(response.getEmail())
+                .enabled(response.isEnabled())
+                .nonLocked(response.isNonLocked())
+                .roles(response.getRoles())
+                .build();
     }
 
     @Override

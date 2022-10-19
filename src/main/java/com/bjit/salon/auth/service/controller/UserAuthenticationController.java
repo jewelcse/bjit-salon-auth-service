@@ -58,8 +58,8 @@ public class UserAuthenticationController {
     @PostMapping("/sign-up")
     public ResponseEntity<?> registerAccount(@Valid @RequestBody UserRegisterDto registerDto) {
         log.info("Creating new account with username: {}",registerDto.getUsername());
-        userService.createUserAccount(registerDto);
-        return ResponseEntity.status(HttpStatus.CREATED).body("Register new account success");
+       ;
+        return ResponseEntity.status(HttpStatus.CREATED).body( userService.createUserAccount(registerDto));
     }
 
 }
