@@ -94,17 +94,17 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public boolean activateDeactivateUserAccount(long id) {
-        Optional<User> user = userRepository.findById(id);
+        Optional<User> user = userRepository.findById(id); // mock
         if (user.isEmpty()) {
             throw new UserNotFoundException("User not found for id: " + id);
         }
         if (user.get().isNonLocked()) {
             user.get().setNonLocked(false);
-            userRepository.save(user.get());
+            userRepository.save(user.get()); //mock
             return false;
         }
         user.get().setNonLocked(true);
-        userRepository.save(user.get());
+        userRepository.save(user.get()); // mock
         return true;
     }
 }
