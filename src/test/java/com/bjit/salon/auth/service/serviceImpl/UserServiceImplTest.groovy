@@ -15,7 +15,7 @@ import org.springframework.security.crypto.password.PasswordEncoder
 import spock.lang.Specification
 
 @SpringBootTest
-class UserServiceImplTests extends Specification {
+class UserServiceImplTest extends Specification {
 
     private UserRepository userRepository
     private RoleRepository roleRepository
