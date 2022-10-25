@@ -1,6 +1,6 @@
 package com.bjit.salon.auth.service.serviceImpl
 
-import com.bjit.salon.auth.service.dto.user.service.request.UserRegisterDto
+import com.bjit.salon.auth.service.dto.request.UserRegisterDto
 import com.bjit.salon.auth.service.entity.ERole
 import com.bjit.salon.auth.service.entity.Role
 import com.bjit.salon.auth.service.entity.User
@@ -9,10 +9,8 @@ import com.bjit.salon.auth.service.exception.UserEmailAlreadyTakenException
 import com.bjit.salon.auth.service.exception.UserNotFoundException
 import com.bjit.salon.auth.service.repository.RoleRepository
 import com.bjit.salon.auth.service.repository.UserRepository
-import com.bjit.salon.auth.service.serviceImpl.UserServiceImpl
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
-import org.springframework.security.core.userdetails.UsernameNotFoundException
 import org.springframework.security.crypto.password.PasswordEncoder
 import spock.lang.Specification
 

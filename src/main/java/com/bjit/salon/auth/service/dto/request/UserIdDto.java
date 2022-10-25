@@ -1,4 +1,4 @@
-package com.bjit.salon.auth.service.dto.user.service.request;
+package com.bjit.salon.auth.service.dto.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

@@ -1,6 +1,6 @@
 package com.bjit.salon.auth.service.controller;
 
-import com.bjit.salon.auth.service.dto.user.service.request.UserIdDto;
+import com.bjit.salon.auth.service.dto.request.UserIdDto;
 import com.bjit.salon.auth.service.service.UserService;
 import lombok.AllArgsConstructor;
 import org.slf4j.Logger;

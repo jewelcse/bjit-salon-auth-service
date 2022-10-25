@@ -1,9 +1,9 @@
 package com.bjit.salon.auth.service.controller;
 
 
-import com.bjit.salon.auth.service.dto.user.service.request.UserLoginDto;
-import com.bjit.salon.auth.service.dto.user.service.request.UserRegisterDto;
-import com.bjit.salon.auth.service.dto.user.service.response.LoginResponseDto;
+import com.bjit.salon.auth.service.dto.request.UserLoginDto;
+import com.bjit.salon.auth.service.dto.request.UserRegisterDto;
+import com.bjit.salon.auth.service.dto.response.LoginResponseDto;
 import com.bjit.salon.auth.service.security.jwt.JwtUtil;
 import com.bjit.salon.auth.service.service.UserService;
 import com.bjit.salon.auth.service.serviceImpl.UserDetailsImpl;

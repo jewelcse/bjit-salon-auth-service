@@ -1,4 +1,4 @@
-package com.bjit.salon.auth.service.dto.user.service.response;
+package com.bjit.salon.auth.service.dto.response;
 
 import com.bjit.salon.auth.service.entity.Role;
 import lombok.*;
