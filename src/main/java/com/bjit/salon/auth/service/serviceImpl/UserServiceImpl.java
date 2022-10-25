@@ -1,8 +1,8 @@
 package com.bjit.salon.auth.service.serviceImpl;
 
 
-import com.bjit.salon.auth.service.dto.user.service.request.UserRegisterDto;
-import com.bjit.salon.auth.service.dto.user.service.response.RegisterResponseDto;
+import com.bjit.salon.auth.service.dto.request.UserRegisterDto;
+import com.bjit.salon.auth.service.dto.response.RegisterResponseDto;
 import com.bjit.salon.auth.service.entity.ERole;
 import com.bjit.salon.auth.service.entity.Role;
 import com.bjit.salon.auth.service.entity.User;
@@ -13,8 +13,6 @@ import com.bjit.salon.auth.service.repository.RoleRepository;
 import com.bjit.salon.auth.service.repository.UserRepository;
 import com.bjit.salon.auth.service.service.UserService;
 import lombok.AllArgsConstructor;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -94,17 +92,17 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public boolean activateDeactivateUserAccount(long id) {
-        Optional<User> user = userRepository.findById(id);
+        Optional<User> user = userRepository.findById(id); // mock
         if (user.isEmpty()) {
             throw new UserNotFoundException("User not found for id: " + id);
         }
         if (user.get().isNonLocked()) {
             user.get().setNonLocked(false);
-            userRepository.save(user.get());
+            userRepository.save(user.get()); //mock
             return false;
         }
         user.get().setNonLocked(true);
-        userRepository.save(user.get());
+        userRepository.save(user.get()); // mock
         return true;
     }
 }

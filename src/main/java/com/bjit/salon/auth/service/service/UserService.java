@@ -1,7 +1,7 @@
 package com.bjit.salon.auth.service.service;
 
-import com.bjit.salon.auth.service.dto.user.service.request.UserRegisterDto;
-import com.bjit.salon.auth.service.dto.user.service.response.RegisterResponseDto;
+import com.bjit.salon.auth.service.dto.request.UserRegisterDto;
+import com.bjit.salon.auth.service.dto.response.RegisterResponseDto;
 
 public interface UserService {
     RegisterResponseDto createUserAccount(UserRegisterDto registerDto);

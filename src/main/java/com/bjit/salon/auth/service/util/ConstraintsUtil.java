@@ -16,7 +16,7 @@ public class ConstraintsUtil {
     public static final String SALON_STAFF_AG_SERVICE ="/salons-staffs";
 
     public static final String[] APPLICATION_PUBLIC_URL= new String[]{
-            APPLICATION_BASE_URL+"/",
+            APPLICATION_BASE_URL+"/**",
             APPLICATION_BASE_URL+"/sign-in",
             APPLICATION_BASE_URL+"/sign-up",
             APPLICATION_BASE_URL+"/",
